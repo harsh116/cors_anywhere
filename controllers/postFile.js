@@ -35,6 +35,7 @@ const postFile = (url, headersToBeSent, method, req, res) => {
           } else {
             return response
               .text()
+
               .then((text) => {
                 // The response wasn't a JSON object
                 // Process your text as a String

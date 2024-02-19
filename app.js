@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 8080;
 const { handleGet } = require("./controllers/get.js");
 const { handlePostOrPut } = require("./controllers/post.js");
 const { handleDelete } = require("./controllers/delete.js");
+const { handleGetFile } = require("./controllers/getFile.js");
+
 //const { handlePut } = require("./controllers/put.js");
 
 const corsOptions = {
@@ -53,6 +55,7 @@ const upload = multer({ dest: "uploads/" });
 // };
 //
 app.get("/cors-submit", handleGet);
+app.get("/cors-submit/getfile", handleGetFile);
 //
 // else if(contentType && contentType.indexOf("application/x-www-form-urlencoded") !== -1){
 //      console.log()

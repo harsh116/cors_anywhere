@@ -1,0 +1,2 @@
+so i dont need to send multipart/formdata or any header from evene backend.
+i will try to fix it  though bcz other header maybe important to send too

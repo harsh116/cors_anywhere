@@ -1,9 +1,19 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+// const ngrok = require("ngrok");
+// const token = "<TOKEN>";
 
 const PORT = process.env.PORT || 8080;
-
+// (async function () {
+//   try {
+//     await ngrok.authtoken(token);
+//     const url = await ngrok.connect(PORT);
+//     console.log("url: ", url);
+//   } catch (err) {
+//     console.log("err: ", err);
+//   }
+// })();
 // const PORT=8080
 //
 
@@ -18,6 +28,7 @@ const { postChunksForm } = require("./controllers/postChunksForm.js");
 const corsOptions = {
   credentials: true,
 };
+
 
 app.use(cors(corsOptions));
 app.use(express.json());
